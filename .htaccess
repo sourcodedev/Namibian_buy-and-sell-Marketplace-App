@@ -1,0 +1,19 @@
+RewriteEngine On
+
+
+# Redirect /index.php to /
+RewriteCond %{THE_REQUEST} /index.php [NC]
+RewriteRule ^index.php$ / [R=301,L]
+
+
+
+# Remove .php extension from URLs (internally)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*[^/])$ $1.php [L]
+
+# Internally rewrite /profile to /auth/welcome.php
+RewriteRule ^profile$ /auth/welcome.php [L]
+
+# Internally rewrite / to /index.php
+RewriteRule ^$ index.php [L]

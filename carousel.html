@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <style>
+        /* Add your custom CSS styles here */
+    </style>
+</head>
+<body>
+
+<!-- Your HTML content -->
+
+<!-- Add Swiper -->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide"><img src="uploads/1000625702.jpg" alt="Image 1"></div>
+        <div class="swiper-slide"><img src="uploads/1000625702.jpg" alt="Image 2"></div>
+        <!-- Add more slides as needed -->
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+</div>
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+    const swiper = new Swiper('.swiper-container', {
+        // Optional parameters
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+        },
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+{{mediaContent}}
+<div class="loader"></div>
+<div class="videoSidebar">
+
+    <div class="videoSidebar__button" style="font-size: 30px;">
+        <i class="far fa-thumbs-up {{isLiked}}" onclick="toggleHeart(this, event)"></i>
+        <p style="font-size: 18px; text-shadow: 2px 1px 4px rgb(0 0 0);">{{likeCount}}</p>
+    </div>
+    
+    
+    
+    <div class="videoSidebar__button" style="font-size: 30px;" onclick="toggleComments()">
+        <i class="far fa-comment"></i>
+        <p style="font-size: 18px;text-shadow: 2px 1px 4px rgb(0 0 0);">{{commentCount}}</p>
+    </div>
+    
+    <div class="videoSidebar__button" style="font-size: 30px;" onclick="sendWhatsAppMessage('{{videoURL}}')">
+        <i class="far fa-paper-plane"></i>
+        <p style="font-size: 18px;text-shadow: 2px 1px 4px rgb(0 0 0);">{{shareCount}}</p>
+    </div>
+
+    <div class="videoSidebar__button" style="font-size: 30px;">
+        <i class="far fa-bookmark"  onclick="toggleSave(this, event)"></i>
+        <p style="font-size: 18px;text-shadow: 2px 1px 4px rgb(0 0 0);">{{saveCount}}</p>
+    </div>
+
+    <div class="videoSidebar__button" style="font-size: 30px;" onclick="toggleVolume()">
+        <i class="fas fa-volume-mute" id="volumeIcon"></i>
+    </div>
+
+</div>
+<div class="videoFooter">
+    <div class="videoFooter__text">
+        <h3 style="font-size: 24px;">{{randomUsername}}</h3>
+        <p class="videoFooter__description" style="font-size: 18px;">{{randomCaption}}</p>
+        <div class="videoFooter__ticker"></div>
+    </div>
+</div>
+
+
+<div id="overlay" class="overlay" onclick="toggleComments()"></div>
+<div id="commentSection" class="comment-section">
+  <div class="comments-header">
+    <button onclick="toggleComments()">Close</button>
+  </div>
+  <div class="comments-body">
+    <!-- Example comments -->
+    <div class="comment">
+      <p>I sell money.98: That markham shirt is not aligning with the lifestyle 😂😂</p>
+    </div>
+    <div class="comment">
+      <p>Rudorf Bester: next year no tenders....</p>
+    </div>
+    <div class="comment">
+      <p>Uthando Langles: 👍👍👍</p>
+    </div>
+    <div class="comment">
+      <p>Maria Gustav: 😂😂</p>
+    </div>
+  </div>
+</div>
+<button onclick="toggleComments()">Show Comments</button>
+<script src="script.js"></script>
+
